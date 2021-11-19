@@ -1,0 +1,38 @@
+extends layout
+
+block content
+ h1= title
+
+  if(toShow == null)
+    h2 No instance to detail
+  else
+    - let gameid = toShow._id
+    - let game_type = toShow.game_type
+    - let gamequantity = toShow.quantity
+    - let gamecost = toShow.cost
+    - let actionid = "/resource/game/" + gameid
+    script let actionid = "#{actionid}"
+    div
+    div.row
+    div(class='gameAttr mr-3') Game ID is: 
+      span(style="color:red") #{gameid}
+    div.row
+    div(class='gameAttr mr-3') Game Type is: 
+      span(style="color:red") #{game_type}
+    div.row
+    div(class='gameAttr mr-3') Game Quantity is: 
+      span(style="color:red") #{gamequantity}
+    div.row
+    div(class='gameAttr mr-3') Game Cost is:
+      span(style="color:red") #{gamecost}
+    button(class="btn btn-primary m-2" onclick="detailOnid()") Goback
+    button(class="btn btn-danger m-2" onclick="cancel()") Cancel
+
+  script.
+    function cancel() {
+    // Go back to the home page for the game collection
+    window.location.href='/game'
+    }
+    function detailOnid() {
+    window.location.href='/game'
+    }

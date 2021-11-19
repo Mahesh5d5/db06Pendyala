@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1= title
+  //- - let items = ['game_type','quantity','cost']
+  - let items = results;
+  - let o;
+  div(class="container-fluid") 
+    div(class="row m-1") 
+      each item in items  
+        - let destination = `dispatch(\"/game/update?id=${item._id}\")` 
+        div(class="row-sm-2", class="m-1") Item #{item.game_Designer}(#{item.price}) is #{item.size} 
+          button.btn( class="btn-primary ml-1", onclick= destination) Update 
+   
+  script. 
+    function dispatch(path){ 
+      window.location.href=path 
+    }
+
+    function buy(x){
+      alert('purchased item ' + x)
+   } 
+  div(class='container-fluid')
+    div(class='row')
+    div(class="row row-cols-1 row-cols-sm-4 g-6")
+      each o, index in items
+        div(class="card text-dark bg-warning mb-3" class='col' class='card' class='card-body' class='card-text' onclick='buy('+index+')') #{o}
+        
+        
+
+  
