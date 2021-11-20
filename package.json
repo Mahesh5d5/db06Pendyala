@@ -1,5 +1,5 @@
 {
-  "name": "db06manyam",
+  "name": "db06pendyala",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -16,12 +16,12 @@
     "morgan": "^1.10.0",
     "pug": "^3.0.2"
   },
-  "description": "webapps-f21-assignment-11-manyamsrk",
+  "description": "webapps-f21-assignment-11-pendyala",
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "db06manyam"
+    "url": "db06pendyala"
   },
-  "author": "Siva Rama Krishna Manyam",
+  "author": "Mahesh Pendyala",
   "license": "ISC"
 }
