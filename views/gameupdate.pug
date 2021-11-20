@@ -19,21 +19,21 @@ block content
       div.form-group
       div(class="row g-3 align-items-center")
         div(class="col-1")
-          label.gameAttr(for='game_type',class="col-form-label") game designer
+          label.gameAttr(for='price',class="col-form-label")  designer
         div(class="col-auto")
-          input#designer(type='text', name='game_type',class="form-control", value=designer)
+          input#designer(type='text', name='designer',class="form-control", value=designer)
       div.form-group
       div(class="row g-3 align-items-center")
         div(class="col-1")
           label.gameAttr(for='price',class="col-form-label") game price
         div(class="col-auto")
-          input#price(type='number', name='quantity',class="form-control", value=gameprice)
+          input#price(type='number', name='price',class="form-control", value=gameprice)
       div.form-group
       div(class="row g-3 align-items-center")
         div(class="col-1")
           label.gameAttr(for='size',class="col-form-label") game size
         div(class="col-auto")
-          input#size(type='number', name='cost',class="form-control", value=gamesize)
+          input#size(type='number', name='size',class="form-control", value=gamesize)
       input(class="btn btn-danger m-2" type="submit")
         //- button(class="btn btn-danger m-2" onclick="deleteOnid()") Delete
       button(class="btn btn-secondary m-2" onclick="cancel()") Cancel
