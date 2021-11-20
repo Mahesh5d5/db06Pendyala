@@ -12,15 +12,15 @@ block content
     div.form-group
     div(class="row g-3 align-items-center")
       div(class="col-1")
-         label.gameAttr(for='quantity', class="col-form-label") Game price
+         label.gameAttr(for='price', class="col-form-label") Game price
       div(class="col-auto")
-         input#price(type='number', name='quantity',class="form-control")
+         input#price(type='number', name='price',class="form-control")
     div.form-group
     div(class="row g-3 align-items-center")
       div(class="col-1")
-         label.gameAttr(for='cost',class="col-form-label") Game size
+         label.gameAttr(for='size',class="col-form-label") Game size
       div(class="col-auto")
-         input#size(type='number', name='cost',class="form-control")
+         input#size(type='number', name='size',class="form-control")
     input(type="submit",class="btn btn-primary")
  script.
     document.forms['GameForm'].addEventListener('submit', (event) => {
