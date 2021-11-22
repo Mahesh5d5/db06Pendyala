@@ -6,7 +6,7 @@ var logger = require('morgan');
 var passport = require('passport'); 
 var LocalStrategy = require('passport-local').Strategy; 
 var mongoose = require('mongoose');
-var pens = require("./models/pens");
+var game = require("./models/game");
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
@@ -32,24 +32,24 @@ mongoose.connect(connectionString, {
 // server start
 async function recreateDB() {
   // Delete everything
-  await pens.deleteMany();
+  await game.deleteMany();
   let instance1 = new
-  pens({
-    pens_name: "Parker",
-    penstype: "fountain",
-    cost: 119.99
+  game({
+    designer: "john carmack",
+    price: "10",
+    size: 15
   });
   let instance2 = new
-  pens({
-    pens_name: "Reynolds",
-    penstype : "fountain",
-    cost: 19.99
+  game({
+    designe: "Rohith",
+    price : "15",
+    size: 20
   });
   let instance3 = new
-  pens({
-    pens_name:"cello",
-    penstype: "ball",
-    cost: 29.99
+  game({
+    designe:"Mahesh",
+    price: "20",
+    size: 20
   });  
   instance1.save(function (err, doc) {
     if (err) return console.error(err);
@@ -75,7 +75,7 @@ if (reseed) {
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var pensRouter = require('./routes/pens');
+var gameRouter = require('./routes/game');
 var addmodsRouter = require('./routes/addmods');
 var selectorRouter = require('./routes/selector');
 var resourceRouter = require('./routes/resource');
@@ -108,7 +108,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/pens', pensRouter);
+app.use('/game', gameRouter);
 app.use('/addmods', addmodsRouter);
 app.use('/selector', selectorRouter);
 app.use('/', resourceRouter);

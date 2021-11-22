@@ -6,14 +6,18 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
+    "cookie-parser": "^1.4.6",
     "debug": "^4.3.2",
     "express": "^4.17.1",
-    "heroku": "^7.59.1",
-    "http-errors": "^1.8.0",
-    "mongodb": "^4.1.4",
-    "mongoose": "^6.0.12",
+    "express-session": "^1.17.2",
+    "heroku": "^7.59.2",
+    "http-errors": "^1.8.1",
+    "mongodb": "^4.2.0",
+    "mongoose": "^6.0.13",
     "morgan": "^1.10.0",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0",
     "pug": "^3.0.2"
   },
   "description": "webapps-f21-assignment-11-pendyala",
