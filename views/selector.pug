@@ -2,11 +2,11 @@ extends layout
 
 block content
   h1= title
-  - let image_names = ['gas-station.png','gas.png','gas_type.jpg','cost.png','quantity.jpg']
+  - let image_names = ['game-station.png','game.png','game_type.jpg','cost.png','quantity.jpg']
   - for(let i=0;i<3;i++){
       - let rno = Math.floor(Math.random()*5)
       - let iname = image_names[rno]
-      img(src=`images/${iname}` alt='Gas' style='width:300px; height:300px;')
+      img(src=`images/${iname}` alt='Game' style='width:300px; height:300px;')
   - }
   
   
